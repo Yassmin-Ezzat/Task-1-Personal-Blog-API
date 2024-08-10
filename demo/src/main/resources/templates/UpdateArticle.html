@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>
+            Create Article
+        </title>
+    </head>
+
+    <body>
+        <h2>
+            Create Article
+        </h2>
+
+        <form th:action="@{/articles/update}" th:object="${article}" method="POST">
+            <input type="hidden" th:field="*{Id}"> <br>
+            <input type="text" th:field="*{title}" placeholder="Title"> <br>
+            <textarea th:field="*{content}" placeholder="Content"></textarea> <br>
+            <input type="submit" value="update">
+        </form>
+    </body>
+</html>
